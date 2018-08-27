@@ -1,0 +1,42 @@
+<ion-header>
+
+  <ion-navbar color="brand">
+	<button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Maxten</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content no-padding>
+	
+	<ion-refresher (ionRefresh)="refresher($event)">
+		<ion-refresher-content pullingIcon="arrow-dropdown"
+							   pullingText="Pull to refresh"
+							   refreshingSpinner="dots"
+							   refreshingText="Reload from Your Data ...">
+		</ion-refresher-content>
+	</ion-refresher>
+	
+	<ion-slides loop="true" pager>
+      <ion-slide *ngFor="let img of sliders">
+        <img [src]="img.guid.rendered" />
+      </ion-slide>    
+    </ion-slides>
+    
+    <ion-row wrap>
+	  <ion-col no-padding col-6 *ngFor="let category of categories">  
+		  <ion-card (tap)="itemTapped($event, category)">	
+			  <ion-card class="img-width">
+			  <img *ngIf="category.image" src="{{category.image.src}}" />
+			  </ion-card>
+			  <div class="product-text" >
+				<h2 *ngIf="category.name" [innerHTML]="category.name"></h2>
+				<h3>VIEW MORE</h3>
+			  </div>
+		</ion-card>
+	  </ion-col>
+	</ion-row>
+	
+</ion-content>

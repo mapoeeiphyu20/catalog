@@ -1,0 +1,8 @@
+{
+  "name": "polomaxten",
+  "app_id": "f87e5083",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

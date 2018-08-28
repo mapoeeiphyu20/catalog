@@ -13,18 +13,18 @@ export class WoocommerceProvider {
     console.log('Hello WoocommerceProvider Provider');
     
     this.Woocommerce = WC({
-      url: "https://www.polomaxten.com",
-      consumerKey: "ck_012d32107fded5ee05ed42877638ed537821e853",
-      consumerSecret: "cs_ee9ec6644b1233400200b7ecd1192ce5f3290ebc",
+      url: "https://www.yourwebsite.com",
+      consumerKey: "ck_*****",
+      consumerSecret: "cs_*****",
       wpAPI: true,
       version: "wc/v1",
       queryStringAuth: true
     });
      
      this.WoocommerceV2 = WC({
-      url: "https://www.polomaxten.com",
-      consumerKey: "ck_012d32107fded5ee05ed42877638ed537821e853",
-      consumerSecret: "cs_ee9ec6644b1233400200b7ecd1192ce5f3290ebc",
+      url: "https://www.yourwebsite.com",
+      consumerKey: "ck_*****",
+      consumerSecret: "cs_*****",
       wpAPI: true,
       version: "wc/v2",
       queryStringAuth: true
